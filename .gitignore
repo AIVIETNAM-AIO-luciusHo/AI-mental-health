@@ -1,0 +1,24 @@
+# Environments
+.venv/
+venv/
+
+# Data — never committed; see docs/datasets.md for access procedures.
+# DAIC-WOZ/E-DAIC are EULA-restricted: redistribution is a licence violation.
+data/
+
+# Model weights & checkpoints
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# WSL/Windows download cruft
+*:Zone.Identifier
+
+CLAUDE.md
+./claude
