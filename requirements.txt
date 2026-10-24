@@ -1,0 +1,7 @@
+pandas
+pyarrow
+scikit-learn
+transformers
+# torch: CPU-only wheel (8 GB RAM machine, no CUDA). Install with:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Then: pip install -r requirements.txt

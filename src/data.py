@@ -107,4 +107,14 @@ if __name__ == "__main__":
     print(f"\ngrouped split leaks 0 posts; naive row split would leak {leaked}")
     assert leaked > 0, "no leak to prevent -- re-check that posts really do span rows"
 
+    # Negative control (INV-1): the guard must actually fire on a shared post_id.
+    import pandas as pd
+    _a, _b = pd.DataFrame({GROUP: [1, 2]}), pd.DataFrame({GROUP: [2, 3]})
+    try:
+        assert_disjoint(_a, _b, "a", "b")
+    except AssertionError:
+        pass
+    else:
+        raise SystemExit("assert_disjoint did NOT raise on a shared post_id")
+
     print("all checks passed")
