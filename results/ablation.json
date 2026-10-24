@@ -1,0 +1,22 @@
+[
+  {
+    "variant": "tfidf+logreg",
+    "split": "val",
+    "n": 445,
+    "balanced_accuracy": 0.7431,
+    "accuracy": 0.7438,
+    "f1_macro": 0.7426,
+    "recorded": "2026-10-24",
+    "notes": "1-2grams, min_df=2, 26216 features"
+  },
+  {
+    "variant": "majority",
+    "split": "val",
+    "n": 445,
+    "balanced_accuracy": 0.5,
+    "accuracy": 0.5056,
+    "f1_macro": 0.3358,
+    "recorded": "2026-10-24",
+    "notes": "always predicts 1"
+  }
+]
